@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/colors.css">
+    @yield('styles')
 </head>
 
 <body>
@@ -447,7 +448,7 @@
             </div>
             <!-- Header bottom area end -->
             <!-- </header> -->
-            @yield('content')
+            @yield('contents')
     </div>
     </div>
 
@@ -488,7 +489,7 @@
             ga('send', 'pageview')
         </script>
         <script src="../../analytics.js" async="" defer=""></script>
-        @yield('script')
+        @yield('scripts')
 </body>
 
 </html>

@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
-@section('content')
+@section('styles')
+@endsection
+@section('contents')
 <!-- HRADER AREA END -->
 <!-- Slider area -->
 <div class="slider-area">
@@ -222,11 +224,13 @@
                                     <div class="product-info">
                                         <h2><a href="single-product.html">{{$product->name}}</a></h2>
                                         <span class="price">
-                                            $ {{$product->price}}
+                                        <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                         </span>
                                     </div>
                                     <!--Button từ addtocart.vue-->
-                                    <add-to-cart-button/>
+                                    <add-to-cart-button product-id="{{$product->id}}"
+                                        user-id="{{auth()->user()->id ?? 0}}"
+                                    />
 
                                         
                                     
@@ -293,7 +297,8 @@
                                         </span>
                                     </div>
                                     <!--Button từ addtocart.vue-->
-                                    <add-to-cart-button/>
+                                    <add-to-cart-button product-id="{{$product->id}}"
+                                        user-id="{{auth()->user()->id ?? 0}}"/>
 
                                 </div>
                             </div>
@@ -316,11 +321,12 @@
                                     <div class="product-info">
                                         <h2><a href="single-product.html">{{$product->name}}</a></h2>
                                         <span class="price">
-                                            $ {{$product->price}}
+                                        <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                         </span>
                                     </div>
                                    <!--Button từ addtocart.vue-->
-                                    <add-to-cart-button/>
+                                    <add-to-cart-button product-id="{{$product->id}}"
+                                        user-id="{{auth()->user()->id ?? 0}}"/>
 
                                 </div>
                             </div>
@@ -949,6 +955,6 @@
 <!-- Body main wrapper end -->
 @endsection
 
-@section('script')
+@section('scripts')
 
 @endsection

@@ -1903,13 +1903,34 @@ li.megamenu-img a {
     width: 100%;
     text-decoration: none;
 }
-
+.product-hidden .add-to-cart button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 2px solid #12a4dd;
+    border-radius: 25px;
+    color: #12a4dd;
+    display: block;
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    height: 45px;
+    letter-spacing: 0.01em;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+    text-decoration: none;
+}
 .product-hidden .add-to-cart a:hover {
     background: #12a4dd none repeat scroll 0 0;
     border-color: #12a4dd;
     color: #ffffff;
 }
-
+.product-hidden .add-to-cart .button:hover{
+    background: #12a4dd none repeat scroll 0 0;
+    border-color: #12a4dd;
+    color: #ffffff;
+}
 .single-product-area .gridview .add-to-cart {
     margin-bottom: 15px;
     overflow: hidden;

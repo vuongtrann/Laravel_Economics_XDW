@@ -135,9 +135,7 @@
                                 @if (Route::has('login'))
 
                                 @auth
-                                <span style="">
-                                    <a href="{{ url('/home') }}" class="" style="color: white;font-size :medium;">MY CART</a>
-                                </span>
+                               <cart />
                                 @else
                                 <span>
                                     <a href="{{ route('login') }}" class="" style="color: white;font-size :medium;">Log in</a>
@@ -490,6 +488,11 @@
         </script>
         <script src="../../analytics.js" async="" defer=""></script>
         @yield('scripts')
+        <script>
+            window.onbeforeunload =function(){
+                window.scrollTo(0,0); 
+            }
+        </script>
 </body>
 
 </html>

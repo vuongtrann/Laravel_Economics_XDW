@@ -27,7 +27,9 @@
 <script>
 export default {
   data(){
-
+    return{
+      
+    }
   },
   props:['productId','userId'],
   methods:{
@@ -43,7 +45,9 @@ export default {
           'product_id': this.productId
         });
 
-        console.log(response.data);
+        this.$root.$emit('changeInCart', response.data.items);
+
+        // console.log(response.data);
 
       }
   },

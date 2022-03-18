@@ -10,9 +10,10 @@
     <!--load app.css here-->
     <script src="{{ asset('css/app.css') }}" defer></script>
     <!-- Favicon -->
+    @yield('styles')
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/icons/icon_logo.png">
     <!-- Place favicon.ico in the root directory -->
-
+    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/ionicons.min.css">
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/colors.css">
-    @yield('styles')
+    
 </head>
 
 <body>
@@ -163,14 +164,14 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 hidden-md hidden-sm pull-left category-wrapper">
                             <div class="categori-menu">
-                                <span class="categorie-title">Categories</span>
+                                <!-- <span class="categorie-title">Categories</span>
                                 <nav>
                                     <ul class="categori-menu-list menu-hidden">
-                                        <li><a href="shop.html"><span><img src="assets/images/icons/1.png" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="shop.html"><span><img src="assets/images/icons/1.png" alt="menu-icon"></span>Electronics<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
                                             <!-- categori Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu first-megamenu">
+                                            <!-- <ul class="ht-dropdown megamenu first-megamenu"> -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Cameras</li>
                                                         <li><a href="shop.html">Cords and Cables</a></li>
@@ -178,10 +179,10 @@
                                                         <li><a href="shop.html">Microphones</a></li>
                                                         <li><a href="shop.html">Wireless Transmitters</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Digital Cameras</li>
                                                         <li><a href="shop.html">Camera one</a></li>
@@ -189,10 +190,10 @@
                                                         <li><a href="shop.html">Camera three</a></li>
                                                         <li><a href="shop.html">Camera four</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Digital Cameras</li>
                                                         <li><a href="shop.html">Camera one</a></li>
@@ -200,16 +201,16 @@
                                                         <li><a href="shop.html">Camera three</a></li>
                                                         <li><a href="shop.html">Camera four</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
-                                            </ul>
+                                            <!-- </ul> -->
                                             <!-- categori Mega-Menu End -->
-                                        </li>
-                                        <li><a href="shop.html"><span><img src="assets/images/icons/2.png" alt="menu-icon"></span>Fashion<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <!-- </li>
+                                        <li><a href="shop.html"><span><img src="assets/images/icons/2.png" alt="menu-icon"></span>Fashion<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
                                             <!-- categori Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu megamenu-two">
+                                            <!-- <ul class="ht-dropdown megamenu megamenu-two"> -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Men’s Fashion</li>
                                                         <li><a href="shop.html">Blazers</a></li>
@@ -217,10 +218,10 @@
                                                         <li><a href="shop.html">pants</a></li>
                                                         <li><a href="shop.html">Tops & Tees</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Women’s Fashion</li>
                                                         <li><a href="shop.html">Bags</a></li>
@@ -228,16 +229,16 @@
                                                         <li><a href="shop.html">Shirts</a></li>
                                                         <li><a href="shop.html">Tailored</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
-                                            </ul>
+                                            <!-- </ul> -->
                                             <!-- categori Mega-Menu End -->
-                                        </li>
-                                        <li><a href="shop.html"><span><img src="assets/images/icons/3.png" alt="menu-icon"></span>Home & Kitchen<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <!-- </li>
+                                        <li><a href="shop.html"><span><img src="assets/images/icons/3.png" alt="menu-icon"></span>Home & Kitchen<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
                                             <!-- categori Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu megamenu-two">
+                                            <!-- <ul class="ht-dropdown megamenu megamenu-two"> -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Large Appliances</li>
                                                         <li><a href="shop.html">Armchairs</a></li>
@@ -245,10 +246,10 @@
                                                         <li><a href="shop.html">Mattress</a></li>
                                                         <li><a href="shop.html">Sideboard</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Small Appliances</li>
                                                         <li><a href="shop.html">Bootees Bags</a></li>
@@ -256,17 +257,17 @@
                                                         <li><a href="shop.html">Shelf</a></li>
                                                         <li><a href="shop.html">Shoes</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
-                                            </ul>
+                                            <!-- </ul> -->
                                             <!-- categori Mega-Menu End -->
-                                        </li>
-                                        <li><a href="shop.html"><span><img src="assets/images/icons/4.png" alt="menu-icon"></span>Phones & Tablets<i class="fa fa-angle-right" aria-hidden="true"></i>
-                                            </a>
+                                        <!-- </li> -->
+                                        <!-- <li><a href="shop.html"><span><img src="assets/images/icons/4.png" alt="menu-icon"></span>Phones & Tablets<i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a> -->
                                             <!-- categori Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu megamenu-two">
+                                            <!-- <ul class="ht-dropdown megamenu megamenu-two"> -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Tablet</li>
                                                         <li><a href="shop.html">tablet one</a></li>
@@ -274,10 +275,10 @@
                                                         <li><a href="shop.html">tablet three</a></li>
                                                         <li><a href="shop.html">tablet four</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Smartphone</li>
                                                         <li><a href="shop.html">phone one</a></li>
@@ -285,16 +286,16 @@
                                                         <li><a href="shop.html">phone three</a></li>
                                                         <li><a href="shop.html">phone four</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
-                                            </ul>
+                                            <!-- </ul> -->
                                             <!-- categori Mega-Menu End -->
-                                        </li>
-                                        <li><a href="shop.html"><span><img src="assets/images/icons/5.png" alt="menu-icon"></span>TV & Video<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <!-- </li>
+                                        <li><a href="shop.html"><span><img src="assets/images/icons/5.png" alt="menu-icon"></span>TV & Video<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
                                             <!-- categori Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu megamenu-two">
+                                            <!-- <ul class="ht-dropdown megamenu megamenu-two"> -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Gaming Desktops</li>
                                                         <li><a href="shop.html">Alpha Desktop</a></li>
@@ -302,10 +303,10 @@
                                                         <li><a href="shop.html">Ultra Desktop </a></li>
                                                         <li><a href="shop.html">beta desktop</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
                                                 <!-- Single Column Start -->
-                                                <li class="single-megamenu">
+                                                <!-- <li class="single-megamenu">
                                                     <ul>
                                                         <li class="menu-tile">Women’s Fashion</li>
                                                         <li><a href="shop.html">3D-Capable</a></li>
@@ -313,11 +314,11 @@
                                                         <li><a href="shop.html">Free Shipping Eligible</a></li>
                                                         <li><a href="shop.html">On Sale</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
                                                 <!-- Single Column End -->
-                                            </ul>
+                                            <!-- </ul> -->
                                             <!-- categori Mega-Menu End -->
-                                        </li>
+                                        <!-- </li>
                                         <li><a href="shop.html"><span><img src="assets/images/icons/6.png" alt="menu-icon"></span>Beauty</a>
                                         </li>
                                         <li><a href="shop.html"><span><img src="assets/images/icons/7.png" alt="menu-icon"></span>Sport & tourism</a>
@@ -328,7 +329,7 @@
                                         <li><a href="shop.html"><span><img src="assets/images/icons/12.png" alt="menu-icon"></span>Samsung</a></li>
                                         <li><a href="shop.html"><span><img src="assets/images/icons/11.png" alt="menu-icon"></span>Sanyo</a></li>
                                     </ul>
-                                </nav>
+                                </nav> -->
                             </div>
                         </div>
                         <div class="col-lg-9">

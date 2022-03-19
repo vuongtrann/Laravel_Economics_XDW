@@ -103,7 +103,7 @@
                         <div class="col-xl-2 col-md-12">
                             <!-- site-logo -->
                             <div class="site-logo">
-                                <a href="index.html"><img src="assets/images/logo/logo-white.png" alt="Nikado"></a>
+                                <a href='/'><img src="assets/images/logo/logo.png" alt="Nikado" style="height:70px; width:150px; margin-left:30px;"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-md-12">
@@ -137,6 +137,7 @@
 
                                 @auth
                                <cart />
+                              
                                 @else
                                 <span>
                                     <a href="{{ route('login') }}" class="" style="color: white;font-size :medium;">Log in</a>
@@ -147,6 +148,7 @@
                                     <a href="{{ route('register') }}" style="color: white;font-size :medium;">Register</a>
                                 </span>
                                 @endif
+                                
                                 @endauth
 
                                 @endif
@@ -337,15 +339,15 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul>
-                                        <li class="current"><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
-                                            <ul class="submenu">
+                                        <li class="current"><a href='/'>Home</a>
+                                            <!-- <ul class="submenu">
                                                 <li><a href="index.html">Home Shop 1</a></li>
                                                 <li><a href="index-2.html">Home Shop 2</a></li>
                                                 <li><a href="index-3.html">Home Shop 3</a></li>
                                                 <li><a href="index-4.html">Home Shop 4</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
-                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="/allProduct">PRODUCT</a></li>
                                         <li><a href="blog.html">Blog</a></li>
                                         <li><a href="about-us.html">About Us</a></li>
                                         <li><a href="contact-us.html">Contact</a></li>
@@ -392,14 +394,14 @@
                                     <nav id="mobile-menu-active">
                                         <ul class="menu-overflow">
                                             <li><a href="#">HOME</a>
-                                                <ul>
+                                                <!-- <ul>
                                                     <li><a href="index.html">Home Shop 1</a></li>
                                                     <li><a href="index-2.html">Home Shop 2</a></li>
                                                     <li><a href="index-3.html">Home Shop 3</a></li>
                                                     <li><a href="index-4.html">Home Shop 4</a></li>
-                                                </ul>
+                                                </ul> -->
                                             </li>
-                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href='layout.allproduct'>PRODUCT</a></li>
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
                                             <li><a href="contact-us.html">Contact</a></li>

@@ -2,194 +2,13 @@
 @section('styles')
 @endsection
 @section('contents')
-<!-- HRADER AREA END -->
-<!-- Slider area -->
-<div class="slider-area">
-    <div class="container">
-        <div class="row">
-            <div class="slider-hidden col-lg-3">
-
-            </div>
-            <div class="slider col-xl-9">
-
-                <!-- slider-area start -->
-                <div class="slider-area-inner">
-                    <!-- slider start -->
-                    <div class="slider-inner">
-                        <div id="mainSlider" class="nivoSlider nevo-slider">
-                            <img src="assets/images/slider/1.jpg" alt="main slider" title="#htmlcaption1">
-                            <img src="assets/images/slider/2.jpg" alt="main slider" title="#htmlcaption2">
-                        </div>
-                        <div id="htmlcaption1" class="nivo-html-caption slider-caption">
-                            <div class="slider-progress"></div>
-                            <div class="col-md-9">
-                                <div class="slider-content slider-content-1 slider-animated-1">
-                                    <h1 class="hone">INNOVATIVE</h1>
-                                    <h1 class="htwo">SMARTER</h1>
-                                    <h1 class="hthree">BRIGHTER</h1>
-                                    <h3>40” SkyHi Smart Package</h3>
-                                    <div class="button-1 hover-btn-2">
-                                        <a href="shop.html">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="htmlcaption2" class="nivo-html-caption slider-caption">
-                            <div class="slider-progress"></div>
-                            <div class="col-md-9">
-                                <div class="slider-content slider-content-2 slider-animated-2">
-                                    <h1 class="hone">DRONE DIY</h1>
-                                    <h1 class="htwo">WORKSHOP</h1>
-                                    <h3 class="h3one">Build & Fly</h3>
-                                    <h3 class="h3two">Your Own drone!</h3>
-                                    <div class="button-1 hover-btn-1">
-                                        <a href="shop.html">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- slider end -->
-                </div>
-                <!-- slider-area end -->
-            </div>
-            <div class="slider-banner-area col-sm-12">
-                <div class="slider-banner">
-                    <div class="slider-single-banner">
-                        <a href="shop.html">
-                            <img src="assets/images/banner/banner1.jpg" alt="Banner">
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-banner">
-                    <div class="slider-single-banner">
-                        <a href="shop.html">
-                            <img src="assets/images/banner/banner2.jpg" alt="Banner">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Slider area end -->
-<!-- Policy area -->
-<div class="policy-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="policy-area-inner">
-                    <div class="single-policy-area">
-                        <div class="single-policy">
-                            <div class="icon"><i class="icon ion-android-sync"></i></div>
-                            <h3>Free Return</h3>
-                            <p>30 days money back guarantee!</p>
-                        </div>
-                    </div>
-                    <div class="single-policy-area">
-                        <div class="single-policy">
-                            <div class="icon"><i class="icon ion-paper-airplane"></i></div>
-                            <h3>Free Shipping</h3>
-                            <p>Free shipping on all order</p>
-                        </div>
-                    </div>
-                    <div class="single-policy-area">
-                        <div class="single-policy">
-                            <div class="icon"><i class="icon ion-help-buoy"></i></div>
-                            <h3>Support 24/7</h3>
-                            <p>We support online 24 hrs a day</p>
-                        </div>
-                    </div>
-                    <div class="single-policy-area">
-                        <div class="single-policy">
-                            <div class="icon"><i class="icon ion-card"></i></div>
-                            <h3>Receive Gift Card</h3>
-                            <p>Recieve gift all over oder $50</p>
-                        </div>
-                    </div>
-                    <div class="single-policy-area">
-                        <div class="single-policy">
-                            <div class="icon"><i class="icon ion-ios-locked"></i></div>
-                            <h3>Secure Payment</h3>
-                            <p>We Value Your Security</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<
 <!-- Policy area end -->
 <!-- Deals Of The Day -->
-<div class="deals-of-the-day-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title">
-                    <h3>Deals Of The Day</h3>
-                </div>
-            </div>
-        </div>
-        <div class="big-product-area">
-            <div class="row">
-                <div class="product-carousel-active owl-carousel">
-                    <!--Start foreach-->
-                    @if(isset($products))
-                    @foreach($products as $product)
-                    <div class="col-sm-12">
-                        <!-- single product -->
-                        <div class="single-product-area">
-                            <div class="product-wrapper listview">
-                                <div class="list-col4">
-                                    <div class="product-image">
-                                        <a href="#">
-                                            <img src="{{$product->image_name}}" alt="" height="5px" width="auto">
-                                        </a>
-                                        <div class="quickviewbtn">
-                                            <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i class="ion-eye"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-col8">
-                                    <div class="product-info">
-                                        <h2><a href="single-product.html">{{$product->name}}</a></h2>
-                                        <span class="price">
-                                            <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
-                                        </span>
 
-                                        <div class="product-desc">
-                                            <p>{{$product->description}}</p>
-                                        </div>
-                                        <div class="deal-counter">
-                                            <div data-countdown="2021/08/02"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single product end -->
-                    </div>
-                    @endforeach
-                    @endif
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Deals Of The Day -->
 <!-- Home fullwidth banner -->
-<div class="home-fullwidth-banner-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <a href="#">
-                    <img src="assets/images/banner/home1-banner2.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- Home fullwidth banner end -->
 <!-- Best sellers -->
 <div class="product-area">
@@ -197,7 +16,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="section-title">
-                    <h3>Best Sellers</h3>
+                    <h3>New Product</h3>
                 </div>
             </div>
         </div>
@@ -266,7 +85,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="section-title">
-                    <h3>New Arrivals</h3>
+                    <h3>All Product</h3>
                 </div>
             </div>
         </div>
@@ -340,119 +159,7 @@
         </div>
     </div>
 </div>
-<!-- New Arrivals end -->
-<!-- home banner four -->
-<div class="home-banner-four">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5 banner-four-one">
-                <a href="shop.html"><img src="assets/images/banner/ehome1-banner4-1.jpg" alt=""></a>
-            </div>
-            <div class="col-sm-7 banner-four-two">
-                <div class="top-banner">
-                    <a href="shop.html"><img src="assets/images/banner/home1-banner4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom-banner">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <a href="shop.html"><img src="assets/images/banner/home1-banner4-3.jpg" alt=""></a>
-                        </div>
-                        <div class="col-sm-6">
-                            <a href="shop.html"><img src="assets/images/banner/home1-banner4-4.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- home banner four end -->
-<!-- product carosel area -->
 
-<!-- product carosel area end -->
-<!-- Brand zone area -->
-<!-- <div class="brand-zone-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-xl-9 hometab">
-                        <div class="section-title">
-                            <h3>Brand Zone</h3>
-                        </div>
-                        <div class="brand-zone-tab-area">
-                            <div class="brand-tab-menu">
-                                <div class="nav">
-                                    <ul>
-                                        <li><a class="active" data-toggle="tab" href="#brand_zone_1"><span>Gamepad</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_2"><span>TVS</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_3"><span>Cell Phones</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_4"><span>Cameras</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_5"><span>Printers</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_6"><span>Audio & video</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="brand-tab-content">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="brand_zone_1">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_2">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_3">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_4">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_5">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_6">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-xl-3 hometestimonial">
-                        <div class="section-title">
-                            <h3>Testimonials</h3>
-                        </div>
-                        <div class="testimonial-sidebar carosel-next-prive owl-carousel"> -->
-<!-- Testimonial area -->
-<!-- <div class="testimonial-area">
-                                <img src="assets/images/testimonials/testimonial3-120x120.jpg" alt="testimonial">
-                                <blockquote class="testimonials-text">
-                                    <p>RoadThemes support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
-                                </blockquote>
-                                <span>Katherine Sullivan</span>
-                            </div> -->
-<!-- Testimonial area end -->
-<!-- Testimonial area -->
-<!-- <div class="testimonial-area">
-                                <img src="assets/images/testimonials/testimonial5-120x120.jpg" alt="testimonial">
-                                <blockquote class="testimonials-text">
-                                    <p>RoadThemes support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
-                                </blockquote>
-                                <span>Jenifer Brown</span>
-                            </div> -->
-<!-- Testimonial area end -->
-<!-- Testimonial area -->
-<!-- <div class="testimonial-area">
-                                <img src="assets/images/testimonials/testimonial6-120x120.jpg" alt="testimonial">
-                                <blockquote class="testimonials-text">
-                                    <p>RoadThemes support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
-                                </blockquote>
-                                <span>Kathy Young</span>
-                            </div> -->
-<!-- Testimonial area end -->
-<!-- </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-<!-- Brand zone area end -->
 <!-- Brand logo area -->
 <div class="brand-logo-area">
     <div class="container">

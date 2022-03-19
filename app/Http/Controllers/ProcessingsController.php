@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use GuzzleHttp\Handler\Proxy;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Return_;
 
-class ProductsController extends Controller
+class ProcessingsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +14,6 @@ class ProductsController extends Controller
     public function index()
     {
         //
-        $products = Product::all();
-        return view('product', compact('products'));
-    }
-    public function showAllProduct(){
-        $products = Product::all();
-        return view('pages.allProduct',compact('products'));
     }
 
     /**

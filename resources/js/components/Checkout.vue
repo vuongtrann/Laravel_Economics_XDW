@@ -357,6 +357,16 @@ export default {
           'amount': this.items.totalAmount,
           'order' : this.items, 
         });
+        if(response.data.success){
+          this.$toastr.s(response.data.success);
+        }else{
+          this.$toastr.s(response.data.console.error);
+        }
+
+        setTimeout(()=>{
+          window.location.href='/';
+        },2500);
+        
         console.log(response.data);
       } 
       else 

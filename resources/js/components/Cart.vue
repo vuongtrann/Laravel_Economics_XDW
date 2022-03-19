@@ -6,6 +6,7 @@
         ><sup style="font-size: 15px">{{ itemCount }}</sup></a
       >
     </span>
+    
   </div>
 </template>
 

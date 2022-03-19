@@ -26,3 +26,5 @@ Route::get('/checkout', [CartsController::class, 'index'])->name('checkout');
 Route::get('/checkout/get/items', [CartsController::class, 'getCartItemsForCheckout']);
 
 Route::post('/process/user/payment', [CartsController::class, 'processPayment']);
+
+Route::get('/allProduct', [ProductsController::class,'showAllProduct'])->name('allProduct');

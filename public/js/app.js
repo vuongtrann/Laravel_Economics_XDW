@@ -5389,6 +5389,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5814,7 +5815,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 if (!(_this2.firstName != '' && _this2.address != '' && _this2.cardNumber && _this2.cvv)) {
-                  _context2.next = 7;
+                  _context2.next = 9;
                   break;
                 }
 
@@ -5834,19 +5835,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   'expirationYear': _this2.expirationYear,
                   'cvv': _this2.cvv,
                   'cardNumber': _this2.cardNumber,
-                  'amount': _this2.items.totalAmount
+                  'amount': _this2.items.totalAmount,
+                  'order': _this2.items
                 });
 
               case 3:
                 response = _context2.sent;
+
+                if (response.data.success) {
+                  _this2.$toastr.s(response.data.success);
+                } else {
+                  _this2.$toastr.s(response.data.console.error);
+                }
+
+                setTimeout(function () {
+                  window.location.href = '/';
+                }, 2500);
                 console.log(response.data);
-                _context2.next = 8;
+                _context2.next = 10;
                 break;
 
-              case 7:
+              case 9:
                 _this2.$toastr.e("User info incomplete");
 
-              case 8:
+              case 10:
               case "end":
                 return _context2.stop();
             }

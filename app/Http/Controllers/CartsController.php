@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cart;
-use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Cart;
+use App\Models\Processing;
 use Stripe;
 
 class CartsController extends Controller
@@ -38,39 +39,50 @@ class CartsController extends Controller
     public function store(Request $request)
     {
         if(!$request->get('product_id')){
-            return[
+            return [
                 'message'=>'Cart items returned',
-                'items' => $userItems=Cart::where('user_id', auth()->user()->id)->sum('quantity'),
+                'items' => Cart::where('user_id', auth()->user()->id)->sum('quantity'), 
             ];
         }
-        // Getting product details
-        $product = Product::where('id',$request->get('product_id'))->first();
-        //Fing product in cart.
-        $productFoundInCart = Cart::where('product_id', $request->get('product_id'))->pluck('id');
-   
-        if($productFoundInCart->isEmpty()){
-            //add product in cart
-            $cart = Cart::create([
+
+
+        // Getting product details.
+
+        $product = Product::where('id', $request->get('product_id'))->first();
+
+        $productFoundInCart = Cart::where('product_id', 
+        $request->get('product_id'))->pluck('id');
+
+        
+
+        if($productFoundInCart->isEmpty())
+        {
+            // Adding Product in cart.
+
+            $cart  = Cart::create([
                 'product_id' => $product->id,
                 'quantity' => 1,
                 'price' => $product->sale_price,
                 'user_id' => auth()->user()->id,
             ]);
-        }else{
-            //incrementing prodcut quantity
+        }
+        else
+        {
+            // Incrementing Product Quantity.
 
-            $cart = Cart::where('product_id',$request->get('product_id'))
+            $cart = Cart::where('product_id', $request->get('product_id'))
             ->increment('quantity');
         }
 
-        if($cart){
+         // Check user cart items.
+
+        if($cart)
+        {
             return [
                 'message'=>'Cart Updated',
-                'items' => $userItems=Cart::where('user_id', auth()->user()->id)->sum('quantity'),
+                'items' => Cart::where('user_id', auth()->user()->id)->sum('quantity'), 
             ];
         }
-
-        
     }
 
     /**
@@ -118,11 +130,18 @@ class CartsController extends Controller
         //
     }
 
+    /**
+     * 
+     */
     public function getCartItemsForCheckout(){
+
         $cartItems = Cart::with('product')->where('user_id', auth()->user()->id)->get();
 
         $finalData = [];
-        $amount =0;
+
+        $amount = 0;
+
+
         if(isset($cartItems))
         {
             foreach($cartItems as $cartItem)
@@ -133,23 +152,26 @@ class CartsController extends Controller
                     {
                         if($cartProduct->id == $cartItem->product_id)
                         {
-                            $finalData[$cartItem->product_id]['id']= $cartProduct->id;
-                            $finalData[$cartItem->product_id]['name']= $cartProduct->name;
-                            $finalData[$cartItem->product_id]['quantity']= $cartItem->quantity;
-                            $finalData[$cartItem->product_id]['sale_price']= $cartItem->price;
-                            $finalData[$cartItem->product_id]['total']= $cartItem->price * $cartItem->quantity;
-                            $amount+= $cartItem->price * $cartItem->quantity;
+                            $finalData[$cartItem->product_id]['id'] = $cartProduct->id;
+                            $finalData[$cartItem->product_id]['name'] = $cartProduct->name;
+                            $finalData[$cartItem->product_id]['quantity'] = $cartItem->quantity;
+                            $finalData[$cartItem->product_id]['sale_price'] = $cartItem->price;
+                            $finalData[$cartItem->product_id]['total'] = $cartItem->price * $cartItem->quantity;
+                            $amount += $cartItem->price * $cartItem->quantity;
                             $finalData['totalAmount'] = $amount;
                         }
-                        
                     }
                 }
             }
         }
+
         return response()->json($finalData);
     }
 
-    public function processPayment(Request $request){
+
+
+    public function processPayment(Request $request)
+    {
         $firstName = $request->get('firstName');
         $lastName = $request->get('lastName');
         $address = $request->get('address');
@@ -170,38 +192,44 @@ class CartsController extends Controller
         $orders = $request->get('order');
         $ordersArray = [];
 
-        // getting order details
-        foreach($orders as $order){
-            if($order['id']){
-                $ordersArray[$order['id']]['order_id']=$order['id'];
-                $ordersArray[$order['id']]['quantity']=$order['quantity'];
+        // Getting Order Details.
+        if (is_object($orders)){
+            foreach($orders as $order)
+            {
+                if($order['id'])
+                {
+                    $ordersArray[$order['id']]['order_id'] = $order['id'];
+                    $ordersArray[$order['id']]['quantity'] = $order['quantity'];
+                }
             }
-            $ordersArray[] = $order['id'];
         }
-      
-
         // Process payment.
+
         $stripe = Stripe::make(env('STRIPE_KEY'));
+
 
         $token = $stripe->tokens()->create([
             'card' => [
-                'number'=> $cardNumber,
-                'exp_month' =>$expirationMonth,
+                'number' => $cardNumber,
+                'exp_month' => $expirationMonth,
                 'exp_year' => $expirationYear,
-                'cvc' => $cvv,
+                'cvc'=> $cvv,
             ]]
-    );
+        );
+    
         if(!$token['id']){
-            session()->flush('error','Stripe Token generation failed');
+            session()->flush('error', 'Stripe Token generation failed');
             return;
         }
-        //create a customer stripe
+
+        // Create a customer stripe.
+
         $customer = $stripe->customers()->create([
             'name' => $firstName.' '.$lastName,
             'email' => $email,
-            'phone' =>$phone,
+            'phone' => $phone,
             'address' => [
-                'line1' =>$address,
+                'line1' => $address,
                 'postal_code' => $zipCode,
                 'city' => $city,
                 'state' => $state,
@@ -210,7 +238,7 @@ class CartsController extends Controller
             'shipping' => [
                 'name' => $firstName.' '.$lastName,
                 'address' => [
-                    'line1' =>$address,
+                    'line1' => $address,
                     'postal_code' => $zipCode,
                     'city' => $city,
                     'state' => $state,
@@ -220,24 +248,53 @@ class CartsController extends Controller
             'source' => $token['id'],
         ]);
 
+
         // Code for charging the client in Stripe.
 
         $charge = $stripe->charges()->create([
             'customer' => $customer['id'],
             'currency' => 'USD',
-            'amount' =>$amount,
+            'amount' => $amount,
             'description' => 'Payment for order',
         ]);
-        if($charge['status']=="succeeded")
+
+        if($charge['status'] == "succeeded")
         {
-            // capture the details from stripe.
+            // Capture the details from stripe.
+
             $customerIdStripe = $charge['id'];
             $amountRec = $charge['amount'];
-            json_encode($ordersArray);
+            $client_id = auth()->user()->id;
+
+            $processingDetails = Processing::create([
+                'id' => $client_id,
+                'client_name' => $firstName.' '.$lastName,
+                'client_address' => json_encode([
+                                        'line1' => $address,
+                                        'postal_code' => $zipCode,
+                                        'city' => $city,
+                                        'state' => $state,
+                                        'country' => $country,
+                                    ]),
+                'order_details' => json_encode($ordersArray),
+                'amount' => $amount,
+                'currency' => $charge['currency'],
+            ]);
+
+
+            if($processingDetails)
+            {
+                // Clear the cart after payment success.
+
+                Cart:: where('user_id', $client_id)->delete();
+
+                return ['success'=> 'Order completed successfully'];
+            }
+            
         }
         else
         {
-            dd($charge);
+            return ['error'=> 'Order failed contact support'];
         }
     }
 }

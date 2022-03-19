@@ -7,13 +7,13 @@
             <h3 class="box-title">Product in your cart</h3>
             <div class="plan-selection" v-for="item in items" :key="item.id">
               <div class="plan-data" v-if="item.name">
-                <input
+                <!-- <input
                   id="question1"
                   name="question"
                   type="radio"
                   class="with-font"
                   value="sel"
-                />
+                /> -->
                 <label for="question1">{{ item.name }}</label>
                 <p class="plan-text">Quantity : {{ item.quantity }}</p>
                 <span class="plan-price">Price : $ {{ item.sale_price }}</span>

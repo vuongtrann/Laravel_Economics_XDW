@@ -5291,22 +5291,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -5455,6 +5439,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
 //
 //
 //
@@ -29415,44 +29400,9 @@ var render = function () {
         [_vm._v("Add To Card")]
       ),
     ]),
-    _vm._v(" "),
-    _vm._m(0),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "star-actions" }, [
-      _c("div", { staticClass: "product-rattings" }, [
-        _c("span", [_c("i", { staticClass: "fa fa-star" })]),
-        _vm._v(" "),
-        _c("span", [_c("i", { staticClass: "fa fa-star" })]),
-        _vm._v(" "),
-        _c("span", [_c("i", { staticClass: "fa fa-star" })]),
-        _vm._v(" "),
-        _c("span", [_c("i", { staticClass: "fa fa-star-half-o" })]),
-        _vm._v(" "),
-        _c("span", [_c("i", { staticClass: "fa fa-star-o" })]),
-      ]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "actions" }, [
-        _c("li", [
-          _c("a", { attrs: { href: "" } }, [
-            _c("i", { staticClass: "ion-android-favorite-outline" }),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "" } }, [
-            _c("i", { staticClass: "ion-ios-shuffle-strong" }),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -29561,7 +29511,33 @@ var render = function () {
                   _c("div", { staticClass: "panel-body" }, [
                     _vm._m(0),
                     _vm._v(" "),
-                    _vm._m(1),
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-12" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.country,
+                              expression: "country",
+                            },
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "text", name: "country", value: "" },
+                          domProps: { value: _vm.country },
+                          on: {
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.country = $event.target.value
+                            },
+                          },
+                        }),
+                      ]),
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("div", { staticClass: "col-md-6 col-xs-12" }, [
@@ -30226,17 +30202,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("strong", [_vm._v("Country:")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "text", name: "country", value: "" },
-        }),
-      ]),
+    return _c("div", { staticClass: "col-md-12" }, [
+      _c("strong", [_vm._v("Country:")]),
     ])
   },
   function () {

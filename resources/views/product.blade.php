@@ -545,12 +545,13 @@
                                             <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                             </span>
                                             <p>{{$product->description}}</p>
-                                            <div class="box-quantity d-flex">
+                                           
                                                 <!-- <form action="#">
                                                     <input class="quantity mr-40" min="1" value="1" type="number">
                                                 </form> -->
-                                                <a class="add-cart" href="cart.html">add to cart</a>
-                                            </div>
+                                                <add-to-cart-button product-id="{{$product->id}}"
+                                                                    user-id="{{auth()->user()->id ?? 0}}"/>
+                                            
                                             <div class="wishlist-compear-area">
                                                 <a href="wishlist.html"><i class="ion-ios-heart-outline"></i> Add to Wishlist</a>
                                                 <a href="#"><i class="ion-ios-loop-strong"></i> Compare</a>

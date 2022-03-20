@@ -120,7 +120,7 @@
                                 <div class="list-col4">
                                     <div class="product-image">
                                         <a href="#">
-                                            <img src="{{$product->image_name}}" alt="" height="5px" width="auto">
+                                            <img src="assets/images/product/{{$product->image_name}}" alt="" height="5px" width="auto">
                                         </a>
                                         <div class="quickviewbtn">
                                             <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i class="ion-eye"></i></a>
@@ -190,7 +190,7 @@
                                 <div class="list-col4">
                                     <div class="product-image">
                                         <a href="#">
-                                            <img src="{{$product->image_name}}" alt="">
+                                            <img src="assets/images/product/{{$product->image_name}}" alt="">
                                         </a>
                                         <div class="quickviewbtn">
                                             <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i class="ion-eye"></i></a>
@@ -259,7 +259,7 @@
                                 <div class="list-col4">
                                     <div class="product-image">
                                         <a href="">
-                                            <img src="{{$product->image_name}}" alt="">
+                                            <img src="assets/images/product/{{$product->image_name}}" alt="">
                                         </a>
                                         <div class="quickviewbtn">
                                             <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i class="ion-eye"></i></a>
@@ -287,7 +287,7 @@
                                 <div class="list-col4">
                                     <div class="product-image">
                                         <a href="">
-                                            <img src="{{$product->image_name}}" alt="">
+                                            <img src="assets/images/product/{{$product->image_name}}" alt="" height="30px" width="auto">
                                         </a>
                                         <div class="quickviewbtn">
                                             <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i class="ion-eye"></i></a>

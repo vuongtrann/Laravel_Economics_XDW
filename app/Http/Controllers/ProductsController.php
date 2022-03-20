@@ -24,7 +24,12 @@ class ProductsController extends Controller
         $products = Product::all();
         return view('pages.allProduct',compact('products'));
     }
-
+    public function getSearch(Request $req){
+        $productSearch = Product::where('name','like','%'.$req->key.'%')
+                                   ->orWhere('sale_price',$req->key)
+                                   ->get(); 
+        return view('pages.search',compact('productSearch'));
+    }
     /**
      * Show the form for creating a new resource.
      *

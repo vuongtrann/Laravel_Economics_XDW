@@ -28,3 +28,6 @@ Route::get('/checkout/get/items', [CartsController::class, 'getCartItemsForCheck
 Route::post('/process/user/payment', [CartsController::class, 'processPayment']);
 
 Route::get('/allProduct', [ProductsController::class,'showAllProduct'])->name('allProduct');
+
+Route::get('/search', [ProductsController::class,'getSearch'])->name('search');
+//Route::get('search',['as'=>'search','uses'=>'ProductsController@getSearch']);

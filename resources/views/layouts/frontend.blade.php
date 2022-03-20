@@ -109,19 +109,10 @@
                         <div class="col-xl-6 col-md-12">
                             <!-- header-search -->
                             <div class="header-search clearfix">
-                                <div class="category-select pull-right">
-                                    <select class="nice-select-menu">
-                                        <option data-display="All Categories">All Categories</option>
-                                        <option value="1">Decor & Furniture</option>
-                                        <option value="2">Electronics</option>
-                                        <option value="3">Fashion & clothings</option>
-                                        <option value="4" disabled="">Sport & Outdoors</option>
-                                        <option value="5">Toy, Kids & Baby</option>
-                                    </select>
-                                </div>
+                               
                                 <div class="header-search-form">
-                                    <form action="#">
-                                        <input type="text" name="search" placeholder="Search product...">
+                                    <form method="get" action="{{route('search')}}">
+                                        <input type="text" name="key" placeholder="Search product by name and price...">
                                         <input type="submit" name="submit" value="Search">
                                     </form>
                                 </div>

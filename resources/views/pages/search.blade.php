@@ -3,81 +3,6 @@
 @endsection
 @section('contents')
 
-<!-- Policy area end -->
-<!-- Deals Of The Day -->
-
-<!-- Deals Of The Day -->
-<!-- Home fullwidth banner -->
-
-<!-- Home fullwidth banner end -->
-<!-- Best sellers -->
-<div class="product-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title">
-                    <h3>New Product</h3>
-                </div>
-            </div>
-        </div>
-        <div class="product-area-inner">
-            <div class="row">
-                <div class="product-carousel-active-2 owl-carousel">
-                    @if(isset($products))
-                    @foreach($products as $product)
-                    <div class="col-sm-12">
-                        <!-- single product -->
-                        <div class="single-product-area">
-                            <div class="product-wrapper gridview">
-                                <div class="list-col4">
-                                    <div class="product-image">
-                                        <a href="#">
-                                            <img src="assets/images/product/{{$product->image_name}}" alt="">
-                                        </a>
-                                        <div class="quickviewbtn">
-                                            <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View"><i class="ion-eye"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-col8">
-                                    <div class="product-info">
-                                        <h2><a href="single-product.html">{{$product->name}}</a></h2>
-                                        <span class="price">
-                                        <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
-                                        </span>
-                                    </div>
-                                    <!--Button từ addtocart.vue-->
-                                    <add-to-cart-button product-id="{{$product->id}}"
-                                        user-id="{{auth()->user()->id ?? 0}}"
-                                    />
-
-                                        
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single product end -->
-                    </div>
-                    @endforeach
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Best sellers end -->
-<!-- Home fullwidth banner -->
-<div class="home-fullwidth-banner-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <a href="#">
-                    <img src="assets/images/banner/home1-banner3.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Home fullwidth banner end -->
 <!-- New Arrivals -->
 <div class="product-area">
@@ -85,15 +10,15 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="section-title">
-                    <h3>All Product</h3>
+                    <h3>Search Results {{count($productSearch)}}</h3>
                 </div>
             </div>
         </div>
         <div class="product-area-inner">
             <div class="row">
                 <div class="product-carousel-active-3 owl-carousel">
-                    @if(isset($products))
-                    @foreach($products as $product)
+                    @if(isset($productSearch))
+                    @foreach($productSearch as $product)
                     <div class="col-sm-12">
                         <!-- single product -->
                         <div class="single-product-area">

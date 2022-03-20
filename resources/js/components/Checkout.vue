@@ -36,6 +36,7 @@
                         class="form-control"
                         name="country"
                         value=""
+                        v-model="country"
                       />
                     </div>
                   </div>

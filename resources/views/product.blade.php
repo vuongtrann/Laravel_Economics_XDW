@@ -481,7 +481,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-6 col-md-6">
-                    <p>Copyright © 2018 Bege . All Rights Reserved.</p>
+                    <p>Create by Group 5</p>
                 </div>
                 <div class="col-sm-12 col-lg-6 col-md-6 pull-right">
                     <img src="assets/images/icons/payment-icon.png" alt="payment icon">

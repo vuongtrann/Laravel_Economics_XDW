@@ -20,10 +20,12 @@ class ProductsController extends Controller
         $products = Product::all();
         return view('product', compact('products'));
     }
+
     public function showAllProduct(){
         $products = Product::all();
         return view('pages.allProduct',compact('products'));
     }
+    
     public function getSearch(Request $req){
         $productSearch = Product::where('name','like','%'.$req->key.'%')
                                    ->orWhere('sale_price',$req->key)

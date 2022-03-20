@@ -365,7 +365,7 @@ export default {
 
         setTimeout(()=>{
           window.location.href='/';
-        },2500);
+        },1000);
         
         console.log(response.data);
       } 

@@ -5850,7 +5850,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 setTimeout(function () {
                   window.location.href = '/';
-                }, 2500);
+                }, 1000);
                 console.log(response.data);
                 _context2.next = 10;
                 break;

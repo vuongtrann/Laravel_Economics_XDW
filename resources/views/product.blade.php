@@ -343,94 +343,6 @@
         </div>
     </div>
 </div>
-<!-- home banner four end -->
-<!-- product carosel area -->
-
-<!-- product carosel area end -->
-<!-- Brand zone area -->
-<!-- <div class="brand-zone-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-xl-9 hometab">
-                        <div class="section-title">
-                            <h3>Brand Zone</h3>
-                        </div>
-                        <div class="brand-zone-tab-area">
-                            <div class="brand-tab-menu">
-                                <div class="nav">
-                                    <ul>
-                                        <li><a class="active" data-toggle="tab" href="#brand_zone_1"><span>Gamepad</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_2"><span>TVS</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_3"><span>Cell Phones</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_4"><span>Cameras</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_5"><span>Printers</span></a></li>
-                                        <li><a data-toggle="tab" href="#brand_zone_6"><span>Audio & video</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="brand-tab-content">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="brand_zone_1">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_2">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_3">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_4">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_5">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tab-pane fade" id="brand_zone_6">
-                                        <a href="#"><img src="assets/images/banner/home1-tab-img.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-xl-3 hometestimonial">
-                        <div class="section-title">
-                            <h3>Testimonials</h3>
-                        </div>
-                        <div class="testimonial-sidebar carosel-next-prive owl-carousel"> -->
-<!-- Testimonial area -->
-<!-- <div class="testimonial-area">
-                                <img src="assets/images/testimonials/testimonial3-120x120.jpg" alt="testimonial">
-                                <blockquote class="testimonials-text">
-                                    <p>RoadThemes support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
-                                </blockquote>
-                                <span>Katherine Sullivan</span>
-                            </div> -->
-<!-- Testimonial area end -->
-<!-- Testimonial area -->
-<!-- <div class="testimonial-area">
-                                <img src="assets/images/testimonials/testimonial5-120x120.jpg" alt="testimonial">
-                                <blockquote class="testimonials-text">
-                                    <p>RoadThemes support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
-                                </blockquote>
-                                <span>Jenifer Brown</span>
-                            </div> -->
-<!-- Testimonial area end -->
-<!-- Testimonial area -->
-<!-- <div class="testimonial-area">
-                                <img src="assets/images/testimonials/testimonial6-120x120.jpg" alt="testimonial">
-                                <blockquote class="testimonials-text">
-                                    <p>RoadThemes support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
-                                </blockquote>
-                                <span>Kathy Young</span>
-                            </div> -->
-<!-- Testimonial area end -->
-<!-- </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-<!-- Brand zone area end -->
-<!-- Brand logo area -->
 <div class="brand-logo-area">
     <div class="container">
         <div class="row">
@@ -590,90 +502,38 @@
                         <i class="fa fa-times"></i>
                     </button>
                 </div>
+                
                 <div class="modal-body">
+                
                     <!-- Single product area -->
                     <div class="single-product-area">
+                  
                         <div class="container-fullwidth">
+                        
                             <div class="single-product-wrapper">
                                 <div class="row">
+                                @if(isset($products))
+                                
                                     <div class="col-xs-12 col-md-7 col-lg-7">
+                                        
                                         <div class="product-details-img-content">
                                             <div class="product-details-tab mr-40">
                                                 <div class="product-details-large tab-content">
                                                     <div class="tab-pane active" id="pro-details1">
                                                         <div class="product-pop">
                                                             <a href="#">
-                                                                <img src="assets/images/product/single/product4.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="pro-details2">
-                                                        <div class="product-pop">
-                                                            <a href="#">
-                                                                <img src="assets/images/product/single/product5.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="pro-details3">
-                                                        <div class="product-pop">
-                                                            <a href="#">
-                                                                <img src="assets/images/product/single/product6.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="pro-details4">
-                                                        <div class="product-pop">
-                                                            <a href="#">
-                                                                <img src="assets/images/product/single/product7.jpg" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="pro-details5">
-                                                        <div class="product-pop">
-                                                            <a href="#">
-                                                                <img src="assets/images/product/single/product8.jpg" alt="">
+                                                                <img src="assets/images/product/{{$product->image_name}}" alt="">
                                                             </a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="product-details-small nav product-dec-slider-qui owl-carousel">
-                                                    <a class="active" href="#pro-details1">
-                                                        <img src="assets/images/product/thumbnails/product4.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details2">
-                                                        <img src="assets/images/product/thumbnails/product5.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details3">
-                                                        <img src="assets/images/product/thumbnails/product6.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details4">
-                                                        <img src="assets/images/product/thumbnails/product7.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details5">
-                                                        <img src="assets/images/product/thumbnails/product8.jpg" alt="">
-                                                    </a>
-                                                    <a class="active" href="#pro-details1">
-                                                        <img src="assets/images/product/thumbnails/product4.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details2">
-                                                        <img src="assets/images/product/thumbnails/product5.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details3">
-                                                        <img src="assets/images/product/thumbnails/product6.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details4">
-                                                        <img src="assets/images/product/thumbnails/product7.jpg" alt="">
-                                                    </a>
-                                                    <a href="#pro-details5">
-                                                        <img src="assets/images/product/thumbnails/product8.jpg" alt="">
-                                                    </a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-md-5 col-lg-5">
                                         <div class="single-product-info">
-                                            <h1>Sit voluptatem</h1>
+                                            <h1>{{$product->name}}</h1>
                                             <div class="product-rattings">
                                                 <span><i class="fa fa-star"></i></span>
                                                 <span><i class="fa fa-star"></i></span>
@@ -682,13 +542,13 @@
                                                 <span><i class="fa fa-star-o"></i></span>
                                             </div>
                                             <span class="price">
-                                                <del>$ 77.00</del> $ 66.00
+                                            <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                             </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus</p>
+                                            <p>{{$product->description}}</p>
                                             <div class="box-quantity d-flex">
-                                                <form action="#">
+                                                <!-- <form action="#">
                                                     <input class="quantity mr-40" min="1" value="1" type="number">
-                                                </form>
+                                                </form> -->
                                                 <a class="add-cart" href="cart.html">add to cart</a>
                                             </div>
                                             <div class="wishlist-compear-area">
@@ -712,12 +572,19 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
+                            @endif
                                 </div>
+                               
                             </div>
+                            
                         </div>
+                        
                     </div>
                     <!-- Single product area end -->
+                  
                 </div>
+                
             </div><!-- .modal-content -->
         </div><!-- .modal-dialog -->
     </div><!-- END Modal -->

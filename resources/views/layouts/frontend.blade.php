@@ -147,6 +147,7 @@
                                 </span>
                                 <br>
                                 @if (Route::has('register'))
+                                <br>
                                 <span>
                                     <a href="{{ route('register') }}" style="color: white;font-size :medium;">Register</a>
                                 </span>

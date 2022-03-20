@@ -8,7 +8,9 @@
     <div class="container">
         <div class="row">
             <div class="slider-hidden col-lg-3">
-
+            <div class="slider-area-inner">
+                <img src="assets/images/slider/left.webp" alt="" style="height:500px; width:300px">
+            </div>
             </div>
             <div class="slider col-xl-9">
 
@@ -17,37 +19,12 @@
                     <!-- slider start -->
                     <div class="slider-inner">
                         <div id="mainSlider" class="nivoSlider nevo-slider">
-                            <img src="assets/images/slider/1.jpg" alt="main slider" title="#htmlcaption1">
-                            <img src="assets/images/slider/2.jpg" alt="main slider" title="#htmlcaption2">
+                            <img src="assets/images/slider/7.webp" alt="main slider" title="#htmlcaption2" style="height:500px">
+                            <img src="assets/images/slider/6.webp" alt="main slider" title="#htmlcaption2" style="height:500px">
+                            <img src="assets/images/slider/8.webp" alt="main slider" title="#htmlcaption2" style="height:500px">
+                            <img src="assets/images/slider/9.webp" alt="main slider" title="#htmlcaption2" style="height:500px">
                         </div>
-                        <div id="htmlcaption1" class="nivo-html-caption slider-caption">
-                            <div class="slider-progress"></div>
-                            <div class="col-md-9">
-                                <div class="slider-content slider-content-1 slider-animated-1">
-                                    <h1 class="hone">INNOVATIVE</h1>
-                                    <h1 class="htwo">SMARTER</h1>
-                                    <h1 class="hthree">BRIGHTER</h1>
-                                    <h3>40” SkyHi Smart Package</h3>
-                                    <div class="button-1 hover-btn-2">
-                                        <a href="shop.html">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="htmlcaption2" class="nivo-html-caption slider-caption">
-                            <div class="slider-progress"></div>
-                            <div class="col-md-9">
-                                <div class="slider-content slider-content-2 slider-animated-2">
-                                    <h1 class="hone">DRONE DIY</h1>
-                                    <h1 class="htwo">WORKSHOP</h1>
-                                    <h3 class="h3one">Build & Fly</h3>
-                                    <h3 class="h3two">Your Own drone!</h3>
-                                    <div class="button-1 hover-btn-1">
-                                        <a href="shop.html">SHOP NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <!-- slider end -->
                 </div>

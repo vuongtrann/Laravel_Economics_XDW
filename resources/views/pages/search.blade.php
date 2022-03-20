@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="section-title">
-                    <h3>Search Results {{count($productSearch)}}</h3>
+                    <h3>Search Results = {{count($productSearch)}} Product</h3>
                 </div>
             </div>
         </div>

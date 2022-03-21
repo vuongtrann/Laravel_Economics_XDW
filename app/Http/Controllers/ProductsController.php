@@ -25,7 +25,12 @@ class ProductsController extends Controller
         $products = Product::all();
         return view('pages.allProduct',compact('products'));
     }
-    
+
+    public function showSingleProduct(Request $req){
+        $singleData = Product::where('id',$req->id)->first();
+        return view('pages.singleProduct',compact('singleData'));
+    }
+
     public function getSearch(Request $req){
         $productSearch = Product::where('name','like','%'.$req->key.'%')
                                    ->orWhere('sale_price',$req->key)

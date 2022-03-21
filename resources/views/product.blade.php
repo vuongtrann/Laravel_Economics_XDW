@@ -119,7 +119,7 @@
                             <div class="product-wrapper listview">
                                 <div class="list-col4">
                                     <div class="product-image">
-                                        <a href="#">
+                                        <a href="{{route('singleProduct',$product->id)}}">
                                             <img src="assets/images/product/{{$product->image_name}}" alt="" height="5px" width="auto">
                                         </a>
                                         <div class="quickviewbtn">
@@ -129,7 +129,7 @@
                                 </div>
                                 <div class="list-col8">
                                     <div class="product-info">
-                                        <h2><a href="single-product.html">{{$product->name}}</a></h2>
+                                        <h2><a href="{{route('singleProduct',$product->id)}}">{{$product->name}}</a></h2>
                                         <span class="price">
                                             <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                         </span>
@@ -138,7 +138,7 @@
                                             <p>{{$product->description}}</p>
                                         </div>
                                         <div class="deal-counter">
-                                            <div data-countdown="2021/08/02"></div>
+                                            <div data-countdown="2022/08/02"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                             <div class="product-wrapper gridview">
                                 <div class="list-col4">
                                     <div class="product-image">
-                                        <a href="#">
+                                        <a href="{{route('singleProduct',$product->id)}}">
                                             <img src="assets/images/product/{{$product->image_name}}" alt="">
                                         </a>
                                         <div class="quickviewbtn">
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="list-col8">
                                     <div class="product-info">
-                                        <h2><a href="single-product.html">{{$product->name}}</a></h2>
+                                        <h2><a href="{{route('singleProduct',$product->id)}}">{{$product->name}}</a></h2>
                                         <span class="price">
                                         <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                         </span>
@@ -258,7 +258,7 @@
                             <div class="product-wrapper gridview">
                                 <div class="list-col4">
                                     <div class="product-image">
-                                        <a href="">
+                                        <a href="{{route('singleProduct',$product->id)}}">
                                             <img src="assets/images/product/{{$product->image_name}}" alt="">
                                         </a>
                                         <div class="quickviewbtn">
@@ -268,7 +268,7 @@
                                 </div>
                                 <div class="list-col8">
                                     <div class="product-info">
-                                        <h2><a href="single-product.html">{{$product->name}}</a></h2>
+                                        <h2><a href="{{route('singleProduct',$product->id)}}">{{$product->name}}</a></h2>
                                         <span class="price">
                                             <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                         </span>
@@ -286,7 +286,7 @@
                             <div class="product-wrapper gridview">
                                 <div class="list-col4">
                                     <div class="product-image">
-                                        <a href="">
+                                        <a href="{{route('singleProduct',$product->id)}}">
                                             <img src="assets/images/product/{{$product->image_name}}" alt="" height="30px" width="auto">
                                         </a>
                                         <div class="quickviewbtn">
@@ -296,7 +296,7 @@
                                 </div>
                                 <div class="list-col8">
                                     <div class="product-info">
-                                        <h2><a href="single-product.html">{{$product->name}}</a></h2>
+                                        <h2><a href="{{route('singleProduct',$product->id)}}">{{$product->name}}</a></h2>
                                         <span class="price">
                                         <del>$ {{$product->price}}</del> $ {{$product->sale_price}}
                                         </span>

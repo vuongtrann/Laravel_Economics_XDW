@@ -29,5 +29,7 @@ Route::post('/process/user/payment', [CartsController::class, 'processPayment'])
 
 Route::get('/allProduct', [ProductsController::class,'showAllProduct'])->name('allProduct');
 
+Route::get('singleProduct/{id}', [ProductsController::class,'showSingleProduct'])->name('singleProduct');
+
 Route::get('/search', [ProductsController::class,'getSearch'])->name('search');
 //Route::get('search',['as'=>'search','uses'=>'ProductsController@getSearch']);

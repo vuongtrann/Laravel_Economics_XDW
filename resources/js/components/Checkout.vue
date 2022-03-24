@@ -6,7 +6,7 @@
           <div class="box">
             <h3 class="box-title">Product in your cart</h3>
             <div class="plan-selection" v-for="item in items" :key="item.id">
-              <div class="plan-data" v-if="item.name">
+              <div class="plan-data" v-if="item.name && item.image_name">
                 <!-- <input
                   id="question1"
                   name="question"
@@ -16,8 +16,11 @@
                 /> -->
                 <label for="question1">{{ item.name }}</label>
                 <p class="plan-text">Quantity : {{ item.quantity }}</p>
+                <img v-bind:src="'/assets/images/product/' + item.image_name" alt="" height="100px" width="100px">
+                <!-- <p>{{item.image_name}}</p> -->
                 <span class="plan-price">Price : $ {{ item.sale_price }}</span>
               </div>
+              
             </div>
             <div>
               <!--SHIPPING METHOD-->

@@ -18,6 +18,7 @@
             <div class="row">
                 <div class="product-carousel-active-3 owl-carousel">
                     @if(isset($productSearch))
+                    
                     @foreach($productSearch as $product)
                     <div class="col-sm-12">
                         <!-- single product -->

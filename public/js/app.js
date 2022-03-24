@@ -5744,6 +5744,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -29487,7 +29490,7 @@ var render = function () {
                   "div",
                   { key: item.id, staticClass: "plan-selection" },
                   [
-                    item.name
+                    item.name && item.image_name
                       ? _c("div", { staticClass: "plan-data" }, [
                           _c("label", { attrs: { for: "question1" } }, [
                             _vm._v(_vm._s(item.name)),
@@ -29496,6 +29499,15 @@ var render = function () {
                           _c("p", { staticClass: "plan-text" }, [
                             _vm._v("Quantity : " + _vm._s(item.quantity)),
                           ]),
+                          _vm._v(" "),
+                          _c("img", {
+                            attrs: {
+                              src: "/assets/images/product/" + item.image_name,
+                              alt: "",
+                              height: "100px",
+                              width: "100px",
+                            },
+                          }),
                           _vm._v(" "),
                           _c("span", { staticClass: "plan-price" }, [
                             _vm._v("Price : $ " + _vm._s(item.sale_price)),

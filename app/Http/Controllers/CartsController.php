@@ -154,6 +154,7 @@ class CartsController extends Controller
                         {
                             $finalData[$cartItem->product_id]['id'] = $cartProduct->id;
                             $finalData[$cartItem->product_id]['name'] = $cartProduct->name;
+                            $finalData[$cartItem->product_id]['image_name'] = $cartProduct->image_name;
                             $finalData[$cartItem->product_id]['quantity'] = $cartItem->quantity;
                             $finalData[$cartItem->product_id]['sale_price'] = $cartItem->price;
                             $finalData[$cartItem->product_id]['total'] = $cartItem->price * $cartItem->quantity;
@@ -168,7 +169,7 @@ class CartsController extends Controller
         return response()->json($finalData);
     }
 
-
+    // Process Payment
 
     public function processPayment(Request $request)
     {
